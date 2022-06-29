@@ -1,0 +1,191 @@
+/* 
+                            General
+Selectors:
+    tags, Classes, IDs
+
+    you can add multiple classes by just separating them by spaces 
+    <tag class="Class1 Class">
+
+    to select you can:
+    .Class1{}
+    -----
+    Using id, id's are unique
+    #id {
+        property:value;
+    }
+
+--------------
+Selector Combinations:
+    h1.Class1   class 1 inside a h1 tag
+    #id1.Class1   class 1 inside a id
+    to specify ancestors:
+
+    .ancestor .child{}       separated by a space, selects child inside ancestor, even if its not the direct parent
+
+    to share styles between selectors:
+    div, h1, .Class1 {}
+
+-------------------
+How to load CSS:
+    inside head: 
+    <link rel="stylesheet" href="style.css" />
+-------------------
+Priority on styles,
+    normally they go on cascade, from top to bottom. The last defined style for an element is the one used
+    BUT, the style applied depends also on priority, example:
+    <h1 class="Class1" id="header"
+    #header{yellow}
+    .blue { red}
+    tag / element blue
+
+    the final style applied will be yellow, id>class>element
+
+    if you apply an style to a parent, the child will have the same styles applied
+-----------------------------
+Color
+    hexadecimal: #XXYYZZ  X->red   Y->green    Z-> blue, 0 to FF
+    rgb: (255,255,255) 
+    To add transparency same, you can use:
+    rgba: (255,25,255,X)  X-> goes from 0 to 1, 0 total transparent and 1 is full color (can be written as .05)
+    hsl (X,Y,Z)X->matiz 0 to 360 (color used)  Y->0 to 100% saturation, Z-> 0 to 100% light (0 full dark/black)
+    hsla-> same as above
+-----------------------------------
+Box
+    includes, 
+    -Width and height from inside, Content
+    -padding    between border and content
+    -border     border
+    -margin     outside
+    background includes content And padding, bcs its indide the border
+-------------------------------------
+Units
+    px -> pixels
+    %  -> the percentage of the space you have to work with
+    em -> mostly used for fonts, and around fonts, it scales with font size of the parent
+    rem -> it scales of the font size of the root of the document
+    
+-------------------
+                        Selectors
+        Parent-Sibling
+Indirect child selector:
+    div b       b doesnt have to be direct child
+Direct child selector:
+    div > b      all b that are direct child of div
+Select all siblings that come After: 
+    li.red ~ li         selects all li below the li with red class that are siblings
+Select only the direct/next sibling: 
+    li.red + li
+
+
+        Pseudo Classes: 
+Are a way to style elements based on how the user interacts with the page
+every single pseudo class has the element followed by a colon and then the
+actual thing that we want to check, example: 
+
+li:hover     - hover, when the cursor is on the element
+
+input:focus    -focus, changes when you click on it, used on 
+buttons or inputs
+
+input:required    modify when have required attribute   /
+input:checked   modify when checked  (for checkbox input type)
+input:disabled   modify when has disabled attribute
+
+li:first-child    selects first child
+li:last-child
+li:nth-child(X)    selects X child, but can be 2n for every second childe, 3n for every third child, etc. Also (2n - 1) to start from the first element instead of the second
+li:nth-last-child()  same as above
+li:only-child      
+
+span:first-of-type
+li:last-of-type
+li:nth-of-type()   same as above
+
+li:not(XXXX)   selects any li that doesnt have XXXX selector
+
+                Pseudo Elements: 
+
+    ::after
+it modifies anything after the the selector, example: 
+if <div class="red">Hello </>
+div.red::after {
+    content: "sky is blue"
+    background: red
+} 
+that added the "sky is blue" directly after what ever was written in div.red
+so it will show: 
+Hello sky is blue
+    ::before
+same thing as after
+
+                Attribute Selectors: 
+kinda like a class but with [], 
+ [data-red]{...}
+ if <div data-red>
+ can also specify a value with "", like [data-red="true"], if you dont specify the value, modifies all that have the attribute, no matter the value
+
+ if you use =, the value has to be exact match,
+ if you want the value to start with xy, use: ^=
+ if you want the value to end with xy, use: $=
+ if you want the value to have xy anywhere, use: *=
+
+-----------------------
+                Multiple backgrounds
+
+what comes first goes on top
+.multi-bg-example{
+    width: 100%;
+    height: 400px;
+    background-image: url(pic1.),
+                 url(pic2),
+                 linear-gradient(to right, rgb(),rgb());
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: bottom right, left, right;
+               }
+
+
+
+
+
+--------------------------
+    add blur to background
+        {
+            background-color: rgba(242, 242, 242,0.1);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(10px); 
+        }
+       * ------------------
+    add background gradient animation
+        .bg {
+        position: absolute;
+        margin-top: 210px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: 300% 300%;
+        background-image: linear-gradient(
+            -45deg, 
+    
+            rgb(16, 34, 120) 0%, 
+            rgb(87, 26, 110) 51%, 
+            rgb(150, 24, 71) 100%
+        );  
+        animation: AnimateBG 10s ease infinite;
+    }
+    @keyframes AnimateBG { 
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+  *--------------------
+    add fixed background:
+     html{
+        background: url(./bg-images/pic.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+*/

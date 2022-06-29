@@ -1,0 +1,164 @@
+
+* {
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    color: rgb(216, 187, 244);
+    scroll-behavior: smooth;
+    scroll-padding-top: 7vh;
+    /* position: relative; */
+}
+a{
+    text-decoration: none;
+}
+
+nav{
+    position: relative;
+    margin-top: 6vh;
+    margin-right: 6vh;
+    float: right;
+}
+
+.btn-nav{
+    display: inline-flex;
+    list-style-type: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: max-content;
+    font-weight: 600;
+    color: rgb(209, 182, 234);
+    background-color: rgba(120, 80, 150, 0);
+    font-size: 2.5vh;
+    padding: 0.35rem 0.5rem;
+    margin: 0.5rem 0.7rem ;
+    border: 0.12rem solid rgba(28, 61, 108,0);
+    border-radius: 15px;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-icon{
+    padding-right: 0.5rem;
+}
+.btn-nav:hover{
+    background-color: rgba(120, 80, 150, 0.8);
+    border-color: rgba(149, 119, 173, 0.8);
+    box-shadow: 0 0.25rem 0.5rem rgba(217, 0, 255,0.4);
+}
+.up-arrow{
+    height: 3rem;
+    position: sticky;
+}
+
+.arrow{
+    float: right;
+    width: 3rem;
+    height: 3rem;
+}
+.hero.container{
+    padding-top: 35vh;
+}
+.container{
+    padding-top: 30vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.name{
+    position: relative;
+    margin-bottom: 1rem;
+    font-size: 4.5rem;
+    text-shadow: 6px 6px 10px #a74141;
+}
+.central-buttons-container{
+    width: 50rem;
+    height: 25rem;
+    margin: 3rem auto;
+    background-color: #fff;
+}
+.central-buttons-container,.central-buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cv-icon{
+    padding: 1rem;
+background-color: red;
+}
+.section-bg.about{
+    margin-top: 25vh;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(35, 31, 143)
+}
+.section-bg.projects{
+    background-color: rgb(18, 23, 106)
+}
+.section-bg.contact{
+    background-color: rgb(114, 30, 142)
+}
+.section-bg.skills{
+    background-color: rgb(25, 63, 145)
+}
+
+.section-bg{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    height: 800px;
+    width: 80%;
+}
+
+h2{
+    font-size: 2rem;
+    text-shadow: 1px 1px 3px rgba(230,230,230,0.6);
+}
+.about-card{
+    margin: 3rem 3.3rem;
+    height: 220px;
+    min-width: 280px;
+    max-width: 950px;
+
+    border: 0.15rem solid rgba(24, 20, 38,0.5);
+    border-radius: 10%;
+    background-color: rgba(19, 19, 19, 0.6);
+    backdrop-filter: blur(35px);
+}
+.about-text{
+    margin:1.5rem;
+    font-size: 1.2rem;
+    text-align: left;
+}
+/* .home{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath d='M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1 1 0 0 0 .707-1.707l-9-9a.999.999 0 0 0-1.414 0l-9 9A1 1 0 0 0 3 13zm7 7v-5h4v5h-4zm2-15.586 6 6V15l.001 5H16v-5c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v5H6v-9.586l6-6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+} */
+/* 
+.icon-nav{
+    fill: aqua;
+} */
+
+
+/* .bg{
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+} */
+html{
+    /* position: fixed; */
+    /* height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    background-image: url(./bg-images/milad-fakurian-nY14Fs8pxT8-unsplash.jpg);
+    background-size: cover; */
+     
+        background: url(./bg-images/5139395.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
