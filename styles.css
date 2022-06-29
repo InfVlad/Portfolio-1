@@ -5,7 +5,6 @@
     color: rgb(216, 187, 244);
     scroll-behavior: smooth;
     scroll-padding-top: 7vh;
-    /* position: relative; */
 }
 a{
     text-decoration: none;
@@ -55,12 +54,16 @@ nav{
 }
 .hero.container{
     padding-top: 35vh;
+    text-align: center;
 }
 .container{
-    padding-top: 30vh;
+    padding-top: 10vh;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+    /* display: flex;
+    align-content: center;
+    align-items: center; */
+
 }
 
 .name{
@@ -69,12 +72,12 @@ nav{
     font-size: 4.5rem;
     text-shadow: 6px 6px 10px #a74141;
 }
-.central-buttons-container{
+/* .central-buttons-container{
     width: 50rem;
     height: 25rem;
     margin: 3rem auto;
     background-color: #fff;
-}
+} */
 .central-buttons-container,.central-buttons{
     display: flex;
     justify-content: space-around;
@@ -85,23 +88,21 @@ nav{
     padding: 1rem;
 background-color: red;
 }
-.section-bg.about{
+.section.about{
     margin-top: 25vh;
-    flex-direction: column;
-    justify-content: center;
     background-color: rgb(35, 31, 143)
 }
-.section-bg.projects{
-    background-color: rgb(18, 23, 106)
-}
-.section-bg.contact{
-    background-color: rgb(114, 30, 142)
-}
-.section-bg.skills{
+.section.skills{
     background-color: rgb(25, 63, 145)
 }
+.section.projects{
+    background-color: rgb(18, 23, 106)
+}
+.section.contact{
+    background-color: rgb(114, 30, 142)
+}
 
-.section-bg{
+.section{
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -120,7 +121,7 @@ h2{
     max-width: 950px;
 
     border: 0.15rem solid rgba(24, 20, 38,0.5);
-    border-radius: 10%;
+    border-radius: 5%;
     background-color: rgba(19, 19, 19, 0.6);
     backdrop-filter: blur(35px);
 }
