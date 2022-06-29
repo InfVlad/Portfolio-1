@@ -88,6 +88,20 @@ nav{
     padding: 1rem;
 background-color: red;
 }
+.section{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    height: 800px;
+    width: 80%;
+}
+h2{
+    font-size: 2rem;
+    text-shadow: 1px 1px 3px rgba(230,230,230,0.6);
+}
+.section-title{
+    text-align: center;
+}
 .section.about{
     margin-top: 25vh;
     background-color: rgb(35, 31, 143)
@@ -102,18 +116,6 @@ background-color: red;
     background-color: rgb(114, 30, 142)
 }
 
-.section{
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    height: 800px;
-    width: 80%;
-}
-
-h2{
-    font-size: 2rem;
-    text-shadow: 1px 1px 3px rgba(230,230,230,0.6);
-}
 .about-card{
     margin: 3rem 3.3rem;
     height: 220px;
@@ -124,6 +126,25 @@ h2{
     border-radius: 5%;
     background-color: rgba(19, 19, 19, 0.6);
     backdrop-filter: blur(35px);
+}
+.logos-container{
+    margin: 3rem 3.3rem;
+    height: 220px;
+    min-width: 280px;
+    max-width: 950px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    border: 0.15rem solid rgba(24, 20, 38,0.5);
+    border-radius: 5%;
+    background-color: rgba(19, 19, 19, 0.6);
+    backdrop-filter: blur(35px);
+}
+.logos{
+    width: 85px;
+    margin: 15px;
 }
 .about-text{
     margin:1.5rem;
